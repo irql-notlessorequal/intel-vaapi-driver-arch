@@ -20,8 +20,7 @@ sha256sums=('SKIP')
 
 pkgver() {
   cd intel-vaapi-driver
-
-  git describe --tags
+  cat VERSION
 }
 
 prepare() {
