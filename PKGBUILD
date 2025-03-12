@@ -40,7 +40,9 @@ build() {
 
 package() {
   DESTDIR="${pkgdir}" meson install -C build
-  install -Dm 644 intel-vaapi-driver/COPYING -t "${pkgdir}"/usr/share/licenses/libva-intel-driver
+
+  # My fork renamed the COPYING file into LICENSE.
+  install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/$pkgname/COPYING
 }
 
 # vim: ts=2 sw=2 et:
