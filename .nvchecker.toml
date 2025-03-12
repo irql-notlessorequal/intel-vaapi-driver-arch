@@ -1,3 +1,0 @@
-[libva-intel-driver-irql]
-source = "git"
-git = "https://github.com/irql-notlessorequal/intel-vaapi-driver.git"
