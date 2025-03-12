@@ -45,7 +45,7 @@ package() {
   DESTDIR="${pkgdir}" meson install -C build
 
   # My fork renamed the COPYING file into LICENSE.
-  install -Dm644 LICENSE "${pkgdir}"/usr/share/licenses/$pkgname/COPYING
+  install -Dm644 intel-vaapi-driver/LICENSE -t "${pkgdir}"/usr/share/licenses/$pkgname
 }
 
 # vim: ts=2 sw=2 et:
