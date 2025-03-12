@@ -15,9 +15,9 @@ makedepends=(
   git
   meson
 )
-replaces=(libva-driver-intel libva-intel-driver)
-conflicts=(libva-intel-driver)
-provides=(libva-intel-driver)
+provides=('libva-intel-driver')
+conflicts=('libva-intel-driver')
+replaces=('libva-driver-intel')
 source=(git+https://github.com/irql-notlessorequal/intel-vaapi-driver.git#tag=6d64cf2904672d618f0b8fcce13e95a120e1a5aa)
 sha256sums=('SKIP')
 
