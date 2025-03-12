@@ -1,9 +1,11 @@
+# Maintainer: irq-notlessoreq <itistotalbotnet+aur AT SIGN gmail DOT com>
+
 pkgname=libva-intel-driver-irql
 pkgver=2.4.3
 pkgrel=1
 pkgdesc='VA-API implementation for Intel G45 and HD Graphics family (IRQL fork)'
 arch=(x86_64)
-url=https://01.org/linuxmedia/vaapi
+url=https://github.com/irql-notlessorequal/intel-vaapi-driver
 license=(MIT)
 depends=(
   libva
@@ -16,12 +18,13 @@ makedepends=(
 replaces=(libva-driver-intel libva-intel-driver)
 conflicts=(libva-intel-driver)
 provides=(libva-intel-driver)
-source=(git+https://github.com/irql-notlessorequal/intel-vaapi-driver.git)
+source=(git+https://github.com/irql-notlessorequal/intel-vaapi-driver.git#tag=6d64cf2904672d618f0b8fcce13e95a120e1a5aa)
 sha256sums=('SKIP')
 
 pkgver() {
   cd intel-vaapi-driver
-  cat VERSION
+
+  git describe --tags
 }
 
 prepare() {
